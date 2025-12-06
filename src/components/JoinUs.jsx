@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Twitter, Instagram } from 'lucide-react';
 import './JoinUs.css';
 
 const steps = [
@@ -44,6 +44,14 @@ const JoinUs = () => {
                         説明会に申し込む <ArrowRight />
                     </a>
                     <p className="cta-note">※次回説明会の日程はSNSで告知します</p>
+                    <div className="sns-links">
+                        <a href="https://x.com/OIF_OMU" target="_blank" rel="noopener noreferrer" className="sns-btn sns-btn-twitter">
+                            <Twitter size={20} /> <span>@OIF_OMU</span>
+                        </a>
+                        <a href="https://instagram.com/omu.innovation.frontier" target="_blank" rel="noopener noreferrer" className="sns-btn sns-btn-instagram">
+                            <Instagram size={20} /> <span>@omu.innovation.frontier</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

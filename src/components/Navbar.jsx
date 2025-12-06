@@ -1,43 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Courses', href: '#courses' },
-        { name: 'Activities', href: '#activities' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Join', href: '#join' },
+        { name: 'About', to: '/#about' },
+        { name: 'Courses', to: '/#courses' },
+        { name: 'Activities', to: '/#activities' },
+        { name: 'Join', to: '/#join' },
     ];
+
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = -80;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    };
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-container">
-                <a href="#" className="logo">
+                <Link to="/" className="logo" onClick={() => window.scrollTo(0, 0)}>
                     OIF<span className="logo-dot">.</span>
-                </a>
+                </Link>
 
                 <div className="desktop-menu">
                     {navLinks.map((link) => (
-                        <a key={link.name} href={link.href} className="nav-link">
-                            {link.name}
-                        </a>
+                        <HashLink
+                            key={link.name}
+                            to={link.to}
+                            className="nav-link"
+                            scroll={scrollWithOffset}
+                        >
+                            <span className="nav-number">0{navLinks.indexOf(link) + 1}.</span> {link.name}
+                        </HashLink>
                     ))}
-                    <a href="#join" className="cta-button-small">
+                    <HashLink to="/#join" className="cta-button-small" scroll={scrollWithOffset}>
                         Join Us
-                    </a>
+                    </HashLink>
                 </div>
 
                 <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -45,16 +58,17 @@ const Navbar = () => {
                 </div>
 
                 {isOpen && (
-                    <div className="mobile-menu">
+                    <div className="mobile-menu glass-panel">
                         {navLinks.map((link) => (
-                            <a
+                            <HashLink
                                 key={link.name}
-                                href={link.href}
+                                to={link.to}
                                 className="mobile-link"
                                 onClick={() => setIsOpen(false)}
+                                scroll={scrollWithOffset}
                             >
                                 {link.name}
-                            </a>
+                            </HashLink>
                         ))}
                     </div>
                 )}
