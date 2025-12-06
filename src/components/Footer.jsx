@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Instagram, Github, Mail } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import './Footer.css';
 
@@ -35,14 +35,13 @@ const Footer = () => {
                     <div className="footer-contact">
                         <h3>Contact</h3>
                         <div className="social-icons">
-                            <a href="https://x.com/OIF_OMU" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Twitter">
-                                <Twitter size={20} />
+                            <a href="https://x.com/OIF_OMU" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                                </svg>
                             </a>
                             <a href="https://instagram.com/omu.innovation.frontier" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
                                 <Instagram size={20} />
-                            </a>
-                            <a href="https://github.com/ydi102143" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
-                                <Github size={20} />
                             </a>
                         </div>
                         <a href="mailto:contact@oif-omu.com" className="contact-link">

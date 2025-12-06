@@ -98,8 +98,8 @@
     font-weight: 500;
 }
 
-/* X (Twitter) */
-.sns-btn-twitter:hover {
+/* X */
+.sns-btn-x:hover {
     border-color: #fff;
     color: #fff;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);

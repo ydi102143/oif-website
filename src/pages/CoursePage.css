@@ -98,6 +98,7 @@
     font-size: 2.5rem;
     background: linear-gradient(to right, #fff, #8892b0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -233,4 +234,166 @@
     .info-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Yearly Roadmap v2 Styles */
+.roadmap-wrapper-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 2rem 0;
+}
+
+.roadmap-phase {
+    position: relative;
+}
+
+.phase-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.phase-year {
+    display: inline-block;
+    padding: 6px 20px;
+    border: 1px solid;
+    border-radius: 50px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.phase-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #8892b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.phase-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sequential Layout (Year 1) */
+.layout-sequential {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.phase-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.seq-arrow {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+/* Parallel Layout (Year 2) */
+.layout-parallel {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .layout-parallel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Feature Layout (Year 3-4) */
+.layout-feature {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .layout-feature {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .layout-feature .term-card {
+        text-align: center;
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .layout-feature .term-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+}
+
+.term-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.layout-sequential .term-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.layout-parallel .term-card {
+    border-top: 4px solid var(--accent-color);
+    height: 100%;
+}
+
+.layout-feature .term-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.term-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.term-period {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.term-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.term-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
 }

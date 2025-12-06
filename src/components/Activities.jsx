@@ -91,27 +91,27 @@ const Activities = () => {
 
                     <div className="flow-track">
                         <div className="flow-label">Year 2</div>
-                        <div className="flow-phase">Intra-Guilds</div>
+                        <div className="flow-phase">The GUILDS</div>
                         <div className="flow-visual year-2">
                             <div className="flow-line ai-guild">AI Guilds</div>
                             <div className="flow-line dev-guild">Dev Guilds</div>
                             <div className="flow-line biz-guild">Biz Guilds</div>
                         </div>
-                        <div className="flow-desc">コース内で専門チームを結成し実践</div>
+                        <div className="flow-desc">コース内で「専門チーム」を結成し実践</div>
                     </div>
 
                     <div className="flow-arrow">➜</div>
 
                     <div className="flow-track">
                         <div className="flow-label">Year 3-4</div>
-                        <div className="flow-phase">Inter-Guilds</div>
+                        <div className="flow-phase">The FUSION</div>
                         <div className="flow-visual year-3">
                             <div className="flow-mix">
                                 <span>Synergy Projects</span>
-                                <small>Cross-Functional Teams</small>
+                                <small>Cross-Functional</small>
                             </div>
                         </div>
-                        <div className="flow-desc">コースを横断して社会実装・起業へ</div>
+                        <div className="flow-desc">「最強のメンバー」でコースを横断し社会実装</div>
                     </div>
                 </div>
 
