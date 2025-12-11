@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 import './FAQ.css';
@@ -10,11 +10,11 @@ const faqs = [
     },
     {
         question: '活動頻度はどのくらいですか？',
-        answer: '基本的には週1回の定例会と、コースごとの勉強会（週1回程度）があります。プロジェクト期間中はチームごとの活動が増えますが、学業やアルバイトとの両立も十分に可能です。'
+        answer: 'コースごとに週1〜2回の定例活動があります。基礎学習期間はインプットが中心ですが、プロジェクト期間中はチーム開発に熱中するメンバーが多いです。学業や研究を最優先にしつつ、自分のペースで「本気」になれる場所です。'
     },
     {
         question: '会費はかかりますか？',
-        answer: 'サーバー代や学習教材の共有などの運営費として、半期ごとに数千円程度の会費をいただいています。詳細は説明会にてご案内します。'
+        answer: 'いいえ、会費は無料です。学生の負担をなくし、誰もが挑戦できる環境を提供しています。'
     },
     {
         question: '他大学の学生も参加できますか？',

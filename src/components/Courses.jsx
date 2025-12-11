@@ -11,7 +11,7 @@ const courses = [
         jpTitle: 'The Brain',
         icon: <Brain size={48} />,
         color: '#ff0055',
-        description: '最先端の論文を読み解き、数理モデルを実装する「技術の核」を作ります。',
+        description: '最先端AI技術の探求とモデル構築を専門とするコース。',
         role: '技術シーズの提供、R&D',
         skills: ['Machine Learning', 'Deep Learning', 'Paper Reading']
     },
@@ -21,7 +21,7 @@ const courses = [
         jpTitle: 'The Body',
         icon: <Globe size={48} />,
         color: '#00f0ff',
-        description: 'モダンな技術で、使いやすく堅牢なプロダクトを作り上げる「形」を作ります。',
+        description: 'Web/アプリ開発による実装とエンジニアリングを専門とするコース。',
         role: 'UI/UX実装、システム設計、社会実装',
         skills: ['Web Development', 'System Design', 'UI/UX']
     },
@@ -31,7 +31,7 @@ const courses = [
         jpTitle: 'The Direction',
         icon: <Briefcase size={48} />,
         color: '#ffaa00',
-        description: '市場の課題を発見し、技術をビジネスモデルへ変換する「道」を作ります。',
+        description: '企画、外部連携、サークル運営、企業経営などのビジネス領域を専門とするコース。',
         role: '事業開発、マネタイズ、PM',
         skills: ['Business Dev', 'Management', 'Marketing']
     }
@@ -47,7 +47,7 @@ const Courses = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                 >
-                    The Trinity Ecosystem
+                    3つのコース
                 </motion.h2>
                 <p className="section-subtitle">
                     互いに相乗効果（Synergy）を生み出す3つのコース
@@ -75,13 +75,7 @@ const Courses = () => {
                             </div>
 
                             <p className="course-desc">{course.description}</p>
-                            <p className="course-role"><strong>Role:</strong> {course.role}</p>
 
-                            <div className="course-tags">
-                                {course.skills.map((skill, i) => (
-                                    <span key={i} className="course-tag">{skill}</span>
-                                ))}
-                            </div>
 
                             <Link to={`/course/${course.id}`} className="course-link-btn" style={{ '--hover-color': course.color }}>
                                 View Details <ArrowRight size={18} />

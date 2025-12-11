@@ -23,18 +23,31 @@
 }
 
 .project-image-placeholder {
-    height: 150px;
-    background: linear-gradient(45deg, var(--color-bg-lighter), var(--color-bg));
+    width: 100%;
+    height: 180px;
+    background: var(--color-bg-light);
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: var(--color-text-muted);
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-tag {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: 600;
-    font-size: 1.2rem;
+    backdrop-filter: blur(4px);
 }
 
 .project-info {
-    padding: 20px;
+    padding: 24px;
 }
 
 .status-badge {

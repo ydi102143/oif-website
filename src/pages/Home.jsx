@@ -6,6 +6,8 @@ import Activities from '../components/Activities';
 import FAQ from '../components/FAQ';
 import JoinUs from '../components/JoinUs';
 
+import Organization from '../components/Organization';
+
 const Home = () => {
     return (
         <>
@@ -13,8 +15,9 @@ const Home = () => {
             <About />
             <Courses />
             <Activities />
-            <FAQ />
+            <Organization />
             <JoinUs />
+            <FAQ />
         </>
     );
 };

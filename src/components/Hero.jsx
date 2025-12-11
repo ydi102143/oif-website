@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
+import heroBg1 from '../assets/hero_bg_1.jpg';
+import heroBg2 from '../assets/hero_bg_2.jpg';
+import heroBg3 from '../assets/hero_bg_3.jpg';
 import './Hero.css';
 
 const Hero = () => {
@@ -14,6 +17,11 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="hero-background">
+                <div className="hero-images-container">
+                    <img src={heroBg1} alt="" className="hero-bg-img" />
+                    <img src={heroBg2} alt="" className="hero-bg-img" />
+                    <img src={heroBg3} alt="" className="hero-bg-img" />
+                </div>
                 <div className="hero-gradient-1"></div>
                 <div className="hero-gradient-2"></div>
                 <div className="hero-grid"></div>
@@ -27,16 +35,16 @@ const Hero = () => {
                 >
                     <h2 className="hero-subtitle">
                         <span className="line"></span>
-                        Vision：技術と情熱を「社会価値」へ
+                        Mission：技術と情熱を「社会価値」へ
                     </h2>
                     <h1 className="hero-title">
                         OMU Innovation <br />
                         <span className="text-primary glow-text">Frontier</span>
                     </h1>
                     <p className="hero-description">
-                        AI・開発・ビジネスの3領域を横断し、<br />
-                        「学習」から「創造」、そして「社会実装」へ。<br />
-                        大阪公立大学トップ層のためのイノベーション・コミュニティ。
+                        <strong>「学習」から「創造」、そして「社会実装」へ。</strong><br />
+                        大阪公立大学を中心としたイノベーション・コミュニティ。<br />
+                        技術とビジネスを横断し、世界を変える企業と人材を輩出します。
                     </p>
 
                     <div className="hero-buttons">
